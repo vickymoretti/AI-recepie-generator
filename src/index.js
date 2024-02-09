@@ -1,9 +1,9 @@
 function generateRecepie(event) {
 	event.preventDefault();
 
-	alert("tuvieja");
+	let newRecepie = document.querySelector("#recepie");
+	newRecepie.innerHTML = "hola";
 }
 
-let recepieFormElement = document.querySelector("#recepie-generator-form");
-recepieFormElement.addEventListener("submit", generateRecepie);
-alert("tesy");
+let recepieElement = document.querySelector("#recepie-generator-form");
+recepieElement.addEventListener("submit", generateRecepie);
