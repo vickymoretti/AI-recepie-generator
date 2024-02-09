@@ -1,8 +1,12 @@
 function generateRecepie(event) {
 	event.preventDefault();
 
-	let newRecepie = document.querySelector("#recepie");
-	newRecepie.innerHTML = "hola";
+	new Typewriter("#recepie", {
+		strings: ["The new recepie is loading.."],
+		autoStart: true,
+		Delay: 1,
+		cursor: "",
+	});
 }
 
 let recepieElement = document.querySelector("#recepie-generator-form");
