@@ -1,5 +1,4 @@
 function displayRecepie(response) {
-	console.log("recepie generated.");
 	new Typewriter("#recepie", {
 		strings: response.data.answer,
 		autoStart: true,
@@ -21,10 +20,6 @@ function generateRecepie(event) {
 	let recepieElement = document.querySelector("#recepie");
 	recepieElement.classList.remove("hidden");
 	recepieElement.innerHTML = `<div class="generating"> ⌛ Generating a recepie about ${userInstructions.value}..</div>`;
-
-	console.log("generating recepie..");
-	console.log(`${prompt}`);
-	console.log(`${context}`);
 
 	axios.get(apiUrl).then(displayRecepie);
 }
